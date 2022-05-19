@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>[Pricing components]</title>
+
+</head>
+<body>
+
+  <div class="main">
+    <div class="heading">
+      <h2>Our Pricing</h2>
+      <div class="container">
+        <p>Annually</p>
+        <div class="switcher">
+          <label class="switch">
+            <input class="checkbox" type="checkbox" onclick="check()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <p>Monthly</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card first">
+        <div class="container">
+          <h3>Basic</h3>
+          <div class="annualy">
+            <p>&dollar;</p>
+            <h1>199.99</h1>
+          </div>
+          <div class="monthly">
+            <p>&dollar;</p>
+            <h1>19.99</h1>
+          </div>
+          <p class="limits">500 GB Storage</p>
+          <p class="limits">2 Users Allowed</p>
+          <p class="limits">Send up to 3 GB</p>
+          <div class="cta-button">
+            <a href="#" onclick="event.PreventDefault()">Learn More</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card active second">
+        <div class="container">
+          <h3>Professional</h3>
+          <div class="annualy">
+            <p>&dollar;</p>
+            <h1>249.99</h1>
+          </div>
+          <div class="monthly">
+            <p>&dollar;</p>
+            <h1>24.99</h1>
+          </div>
+          <p class="limits">1 TB Storage</p>
+          <p class="limits">5 Users Allowed</p>
+          <p class="limits">Send up to 10 GB</p>
+          <div class="cta-button">
+            <a href="#" onclick="event.PreventDefault()">Learn More</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card third">
+        <div class="container">
+          <h3>Master</h3>
+          <div class="annualy">
+            <p>&dollar;</p>
+            <h1>399.99</h1>
+          </div>
+          <div class="monthly">
+            <p>&dollar;</p>
+            <h1>39.99</h1>
+          </div>
+          <p class="limits">2 TB Storage</p>
+          <p class="limits">10 Users Allowed</p>
+          <p class="limits">Send up to 20 GB</p>
+          <div class="cta-button">
+            <a href="#" onclick="event.PreventDefault()">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script src="./main.js"></script>
+</body>
+</html>

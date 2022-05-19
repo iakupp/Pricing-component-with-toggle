@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+:root {
+  --Main-font-style:"Montserrat", sans-serif;
+  --Mobile-width: 375px;
+  --Desktop-width: 1440px;
+  --Font-size: 15px;
+  --Primary-color:linear-gradient(90deg, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 100%);
+  --Background-color: #fff;
+  --Font-color:#000;
+  --Second-font-color:#6F738D;
+  --number-color:#4A4D5F;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Font-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-inline: auto;
+  width: min(100%, 414px);
+  caret-color: transparent;
+  margin-top: 0;
+  font-family: var(--Main-font-style);
+}
+
+.container {
+  padding: 1.25em;
+  margin-inline: auto;
+  width: min(100%, var(--Mobile-width, 60ch));
+}
+
+.main {
+  margin-inline: auto;
+  background-color: var(--Background-color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  top: -3em;
+  right: -12em;
+  width: 375px;
+  height: 658px;
+  z-index: -1;
+}
+.main .heading {
+  z-index: 5;
+  padding-top: 2em;
+  text-align: center;
+  color: var(--Second-font-color);
+  margin-bottom: 2em;
+}
+.main .heading .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .heading .container .switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bolder;
+  margin: 0 1em;
+}
+.main .heading .container .switcher .switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 27px;
+}
+.main .heading .container .switcher .switch .checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.main .heading .container .switcher .switch .checkbox:checked + .slider {
+  background: var(--Primary-color);
+}
+.main .heading .container .switcher .switch .checkbox:focus + .slider {
+  box-shadow: 0 0 1px var(--Primary-color);
+}
+.main .heading .container .switcher .switch .checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+.main .heading .container .switcher .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--Primary-color);
+  transition: 0.4s;
+}
+.main .heading .container .switcher .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 4px;
+  bottom: 3px;
+  background-color: var(--Background-color);
+  transition: 0.4s;
+}
+.main .heading .container .switcher .switch .round {
+  border-radius: 34px;
+}
+.main .heading .container .switcher .switch .round::before {
+  border-radius: 50%;
+}
+.main .heading .container p {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+.main .card {
+  z-index: 5;
+  background-color: var(--Background-color);
+  margin-inline: auto;
+  text-align: center;
+  width: 80%;
+  border-radius: 0.5em;
+}
+.main .card .container h3, .main .card .container p {
+  color: var(--Second-font-color);
+}
+.main .card .container h1 {
+  color: var(--number-color);
+  font-size: 4em;
+}
+.main .card .container .limits {
+  font-size: 0.9em;
+  padding: 1em 0;
+  width: 85%;
+  margin-inline: auto;
+}
+.main .card .container .limits:first-of-type {
+  border-top: 1px solid rgba(111, 115, 141, 0.2666666667);
+}
+.main .card .container .limits:nth-of-type(2) {
+  border-top: 1px solid rgba(111, 115, 141, 0.2666666667);
+  border-bottom: 1px solid rgba(111, 115, 141, 0.2666666667);
+}
+.main .card .container .limits:last-of-type {
+  border-bottom: 1px solid rgba(111, 115, 141, 0.2666666667);
+}
+.main .card .container .annualy, .main .card .container .monthly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em auto 1.1em auto;
+}
+.main .card .container .annualy p, .main .card .container .monthly p {
+  font-size: 1.8em;
+  color: var(--number-color);
+}
+.main .card .container .cta-button {
+  margin-top: 2em;
+  background: var(--Primary-color);
+  width: 85%;
+  margin-inline: auto;
+  padding: 0.6em 0;
+  border-radius: 0.5em;
+}
+.main .card .container .cta-button a {
+  color: var(--Background-color);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+.main .active {
+  margin: 3em auto;
+  background: var(--Primary-color);
+}
+.main .active .container h1, .main .active .container h3, .main .active .container p {
+  color: var(--Background-color);
+}
+.main .active .container .annualy p, .main .active .container .monthly p {
+  color: var(--Background-color);
+}
+.main .active .container .limits:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.377);
+}
+.main .active .container .limits:nth-of-type(2) {
+  border-top: 1px solid rgba(255, 255, 255, 0.377);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+}
+.main .active .container .limits:last-of-type {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+}
+.main .active .container .cta-button {
+  background: var(--Background-color);
+}
+.main .active .container .cta-button a {
+  background: var(--Primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1230px) {
+  body {
+    width: min(100%, 1440px);
+  }
+
+  .main {
+    max-width: 100%;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  .main .heading {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .main .cards {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    grid-column: 1/span 3;
+    grid-row: 2;
+  }
+  .main .cards .card.first {
+    grid-row: 2;
+    grid-column: 1;
+    margin-right: 5em;
+  }
+  .main .cards .card.second {
+    grid-row: 2;
+    grid-column: 2;
+    margin-right: 5em;
+  }
+  .main .cards .card.third {
+    grid-row: 2;
+    grid-column: 3;
+  }
+}/*# sourceMappingURL=style.css.map */
